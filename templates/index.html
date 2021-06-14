@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>FakeDiy</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	<style>
+		#wrapper {
+			background-color: tomato;
+		    margin-left: 25%;
+    		margin-right: 25%;
+    		top: 0;
+    		padding: 20px 10px;
+    		background-color: #f8f9fa;
+		}
+		font-family: 'Roboto', sans-serif;
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		 <div
+			class="p-5 text-center bg-image"
+			style="
+			  background-image: url(/img/utsav-srestha-HeNrEdA4Zp4-unsplash.jpg);
+			  height: 200px;
+			  background-size: 100% 300%
+			"
+		  >
+			<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+			  <div class="d-flex justify-content-center align-items-center h-100">
+				<div class="text-white">
+				  <h1 class="mb-3">FakeDIY</h1>
+				  <h4 class="mb-3">Muy simple FakeNews Classifier</h4>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		<br>
+		<form id="form" action="{{ url_for('classify')}}" method="POST">
+			<div class="form-group">
+				<label for="exampleInputPassword1">Titulo de la noticia (sólo en inglés)</label>
+				<input type="text" name="user_title" placeholder="Titulo de la noticia" required="required" id="" class="form-control" /><br><br>
+				    <label for="exampleInputPassword1">Cuerpo de la noticia (sólo en inglés)</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="8" name="user_content" placeholder="Contenido de la noticia" required="required"></textarea>
+			</div>
+			<div class="form-group">
+    			<label for="exampleInputPassword1">Seleccione Algoritmo</label>
+				<select name="algoritmo" id="algoritmo" class="form-control">
+					<option value="svm">SVM</option>
+					<option value="knn">KNN (k=4)</option>
+					<option value="rfc">RFC</option>
+				</select><br>
+    		<button type="submit" id="button_submit" class="btn btn-primary">CLASIFICAR</button>
+			</div>
+			<br>
+        	<h2>{{resultado}}<h2>
+		</form>
+		<!-- Footer -->
+		<footer class="footer mt-auto py-3 bg-light">
+		  <div class="container">
+			<span class="text-muted container text-center">
+				<p>
+					<h6>
+						<a href="https://github.com/matog/FakeNewsClassifier">Código en Github</a> // Imagen de <a href="https://unsplash.com/photos/HeNrEdA4Zp4">Utsav Srestha</a>
+					</h6>
+				</p>
+			</span>
+		  </div>
+		</footer>
+	</div>
+</body>
+</html>
