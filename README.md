@@ -14,7 +14,7 @@ La base de datos con etiquetas se descargó del sitio de  [Clément Bisaillon](h
 
 El modelo para el deploy en Heroku se basó en el desarrollo de [Shaunak Varudandi](https://towardsdatascience.com/fake-news-classifier-to-tackle-covid-19-disinformation-ii-116ed2eb44e4)
 
-El archivo [FakeDiy_Flask.ipynb](https://github.com/matog/FakeDiyClassifier-Flask/blob/main/FakeDiy_Flask.ipynb) es el que genera los "pickles files" con la información de los modelos, para poder hacer la predicción.
+El archivo [FakeDiy_Flask.ipynb]() es el que genera los "pickles files" con la información de los modelos, para poder hacer la predicción. Y el notebook [FakeNewsClassifier.ipynb]() entrena los modelos, calculando el _accuracy_ de cada uno.
 
 _Work in progress_: Conseguir una base etiquetada (FAKE-TRUE) de noticias en español, para entrenar el modelo con contenido local.
 

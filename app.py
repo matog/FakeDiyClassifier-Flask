@@ -6,8 +6,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
 
 tfidf = pickle.load(open('vectorizer.pickle', 'rb'))
-app = Flask(__name__)
 
+app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
 def home():
