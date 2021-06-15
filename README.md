@@ -2,7 +2,7 @@
 
 Sencilla web app para correr un clasificador de noticias _fake_ en inglés.
 
-Programada en Python/Flask, se puede ver una demo en [FakeDiy](https://fakediy.herokuapp.com/)
+Programada en Python/Flask. Se puede usar una demo en [FakeDiy](https://fakediy.herokuapp.com/)
 
 Se corren 3 modelos para clasificar las noticias:
 
