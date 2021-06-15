@@ -18,4 +18,5 @@ El archivo [FakeDiy_Flask.ipynb]() es el que genera los "pickles files" con la i
 
 _Work in progress_: Conseguir una base etiquetada (FAKE-TRUE) de noticias en español, para entrenar el modelo con contenido local.
 
-![](/img/fake.png)
+
+![](https://user-images.githubusercontent.com/660448/122110466-f3be9580-cdf4-11eb-8e3b-380e70ec2d69.png)
