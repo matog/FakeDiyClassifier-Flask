@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.pipeline import Pipeline
 
-tfidf = pickle.load(open('vectorizer.pickle', 'rb'))
+tfidf = pickle.load(open('vectorizer_es.pickle', 'rb'))
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -27,9 +27,9 @@ def classify():
         data = [total]
         def alg(algoritmo):
             switcher = {
-                'svm': 'model_svm.pickle',
-                'knn': 'model_knn.pickle',
-                'rfc': 'model_rfc.pickle'
+                'svm': 'model_svm_es.pickle',
+                'knn': 'model_knn_es.pickle',
+                'rfc': 'model_rfc_es.pickle'
             }
             return switcher.get(algoritmo, "Algoritmo no encontrado")
         model_load = alg(algoritmo)
